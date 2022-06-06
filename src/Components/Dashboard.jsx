@@ -398,7 +398,8 @@ function Dashboard() {
                         </div>
                         <div className="modal-body">
                             <div id='shopCard'>
-                                
+                            <h5 className="card-title">Your Orders And Delivery Address Has Been Stored In Our DataBase.</h5>
+                                <a href='https://home-delivery-applicatio-43f28-default-rtdb.firebaseio.com/1234567890.json' target='_blank'>Click Here To See Your All Orders</a>
                             </div>
                         </div>
                         <div className="modal-footer">
