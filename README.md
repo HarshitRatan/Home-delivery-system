@@ -1,21 +1,27 @@
-# Getting Started with Create React App
+# Getting Started with Home Delivery System
 
 
-# Application Assumptions : 
+## Application Assumptions : 
 - This Application Store Data in FireBase Realtime DataBase.
 - This Application Store Your Address in Json Format.
 
-# HOW TO USE THIS APPLICATION : 
+## HOW TO USE THIS APPLICATION : 
 - First You have To Enter Your Phone Number, So That Your Data Can We Fetch From Our DataBase.
 - If You Are The First Time User, Then Don't Worry Just Enter Your Phone Number And Continue Shopping.
-- Click on "Your Order" To See All Your Previous Orders in Json Format.
+- After That Add Some Item in your Cart and Proceed to checkout.
+- At checkout, Application Ask Your Delivery Address Which Will Store In Our DataBase. 
+- Click on "Your Order" To See All Your Previous Orders With Delivery Address in Json Format.
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How To Run This Application :
 
-## Available Scripts
+**Note : To Run This Application Make Sure That NodeJS is Installed on Your Local System.** 
+**To Install NodeJS Please Refer : https://nodejs.org/en/download/**
 
-In the project directory, you can run:
+First Download This Repository :
+https://github.com/HarshitRatan/Home-delivery-system/
+
+Then, In the project directory, you can run:
 
 ### `npm start`
 
