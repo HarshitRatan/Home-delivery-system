@@ -10,6 +10,7 @@
 - If You Are The First Time User, Then Don't Worry Just Enter Your Phone Number And Continue Shopping.
 - After That Add Some Item in your Cart and Proceed to checkout.
 - At checkout, Application Ask Your Delivery Address Which Will Store In Our DataBase. 
+- After Placing The Order You Got Your Order ID.
 - Click on "Your Order" To See All Your Previous Orders With Delivery Address in Json Format.
 
 
