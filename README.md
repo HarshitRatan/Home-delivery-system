@@ -1,5 +1,16 @@
 # Getting Started with Create React App
 
+
+# Application Assumptions : 
+- This Application Store Data in FireBase Realtime DataBase.
+- This Application Store Your Address in Json Format.
+
+# HOW TO USE THIS APPLICATION : 
+- First You have To Enter Your Phone Number, So That Your Data Can We Fetch From Our DataBase.
+- If You Are The First Time User, Then Don't Worry Just Enter Your Phone Number And Continue Shopping.
+- Click on "Your Order" To See All Your Previous Orders in Json Format.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -30,7 +41,6 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
-
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
