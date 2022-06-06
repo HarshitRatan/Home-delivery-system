@@ -188,7 +188,7 @@ function Dashboard() {
                                 }}><i className='fa fa-briefcase' style={{ "color": "white", "marginRight": "5px" }}></i>Your Order</button>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" href="#"><i className="fa fa-sign-out" style={{ "color": "white", "marginRight": "5px" }} aria-hidden="true"></i>Sign Out</a>
+                                <button type='button' className="btn nav-link active" onClick={getUserNumber}><i className="fa fa-sign-out" style={{ "color": "white", "marginRight": "5px" }}></i>Sign Out</button>
                             </li>
                         </ul>
                     </div>
