@@ -1,9 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import hello from '../img/dashboard_hello.gif'
 import data from './shopData.json'
 
 
 function Dashboard() {
+
+    const [phone, setPhone] = useState();
+    
+    const getUserNumber = () => {
+        var launch = document.getElementById('launchModal3');
+        launch.click();
+    }
+    useEffect(() => {
+        getUserNumber();
+    }, []);
+
+
+    const ratan = (e) =>{
+        e.preventDefault();
+       var pho =  document.getElementById('phone').value
+       setPhone(pho);
+    }
+
 
 
     // POSTING DATA IN FIREBASE START
@@ -44,7 +62,7 @@ function Dashboard() {
         date = d.getDate() + " - " + months[d.getMonth()] + " - " + d.getFullYear();
         time = d.getHours() + " : " + d.getMinutes();
 
-        var dbName = "1234567890";
+        var dbName = phone;
         var db = "https://home-delivery-applicatio-43f28-default-rtdb.firebaseio.com/" + dbName + ".json";
         // console.log("value of db = "+ db);
 
@@ -157,11 +175,11 @@ function Dashboard() {
                     </button>
                     <div className="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
                         <ul className="navbar-nav">
+                            {/* <li className="nav-item">
+                                <h5 className="nav-link active">User Name : <span style={{ "color": "orange" }}>User</span></h5>
+                            </li> */}
                             <li className="nav-item">
-                                <h5 className="nav-link active">User Name : <span style={{ "color": "orange" }}>Harshit Ratan Shukla</span></h5>
-                            </li>
-                            <li className="nav-item">
-                                <h5 className="nav-link active">Phone Number : <span style={{ "color": "orange" }}>+91 12345 67890</span></h5>
+                                <h5 className="nav-link active">Phone Number : <span style={{ "color": "orange" }}>{phone}</span></h5>
                             </li>
                             <li className="nav-item">
                                 <button className='btn btn-success' type='button' onClick={() => {
@@ -241,6 +259,7 @@ function Dashboard() {
                     © 2022 Copyright:<br></br>
                     <a className="text-white" href="#">Home Delivery Application </a>
                 </div>
+                <button style={{"display" : "none"}} type='button' id='afterPhone'></button>
             </footer>
 
 
@@ -398,12 +417,38 @@ function Dashboard() {
                         </div>
                         <div className="modal-body">
                             <div id='shopCard'>
-                            <h5 className="card-title">Your Orders And Delivery Address Has Been Stored In Our DataBase.</h5>
-                                <a href='https://home-delivery-applicatio-43f28-default-rtdb.firebaseio.com/1234567890.json' target='_blank'>Click Here To See Your All Orders</a>
+                                <h5 className="card-title">Your Orders And Delivery Address Has Been Stored In Our DataBase.</h5>
+                                <a href={"https://home-delivery-applicatio-43f28-default-rtdb.firebaseio.com/" + phone + ".json"} target='_blank'>Click Here To See Your All Orders</a>
                             </div>
                         </div>
                         <div className="modal-footer">
                             <button id='closeModal' type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            {/* <!-- Button trigger Input Number Cart Modal --> */}
+            <button id='launchModal3' style={{ "display": "none" }} type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3"></button>
+
+            {/* <!-- Your Order Cart Modal--> */}
+            <div className="modal fade" id="exampleModal3" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Please Verify Your Number : </h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                            <form onSubmit={ratan}>
+                                <input id ='phone' type="tel" className="form-control" placeholder="Enter Your Phone Number" required/>
+                                <div className="modal-footer">
+                                    <button  type="submit" className="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
